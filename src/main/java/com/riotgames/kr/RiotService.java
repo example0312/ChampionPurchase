@@ -6,11 +6,11 @@ public class RiotService {
 
     /**
      * User 가 인증된 사용지인지를 확인한다.
-     * @param userInfo
+     * @param lolUser
      * @return 인증된 사용자이면 true, 그렇지 않으면 false
      */
-    public boolean isAuthenticatedUser(UserInfo userInfo) {
-        if (userInfo.getAccountId().equals(invalidAccountId)) {
+    public boolean isAuthenticatedUser(LolUser lolUser) {
+        if (lolUser.getAccountId().equals(invalidAccountId)) {
             return false;
         }
         return true;
